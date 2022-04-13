@@ -1,0 +1,14 @@
+.service {
+    border: 2px solid lightslategray;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.service button {
+    border: 1px solid lightseagreen;
+    border-radius: 8px;
+    background-color: lightskyblue;
+    padding: 5px;
+    color: darkslategrey;
+}
