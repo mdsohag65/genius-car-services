@@ -10,8 +10,8 @@ const Order = () => {
     useEffect(() => {
 
         const getOrders = async () => {
-            const email = user.email;
-            const url = `http://localhost:5000/order?email=${email}`;
+            const email = user?.email;
+            const url = `https://glacial-shelf-63460.herokuapp.com/order?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -29,8 +29,13 @@ const Order = () => {
     }, [user]);
 
     return (
-        <div>
+        <div className='w-50 mx-auto'>
             <h2>Your Orders: {orders.length}</h2>
+            {
+                orders.map(order => <div key={order._id}>
+                    <p>{order.email} : {order.service}</p>
+                </div>)
+            }
         </div>
     );
 };
